@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react*/
 import { css } from '@emotion/react';
 import './App.css';
+import { ReactComponent as ChangingImage } from './images/02.60644d3b.jpg';
 import { ReactComponent as LogoIcon } from './images/spatium-white-logo.f2d215ee.svg';
 import { ReactComponent as SlideShow } from './images/browser-mockup.9d688e12.svg';
 
@@ -28,6 +29,13 @@ const menu = css`
 `;
 
 //:hover
+const top = css`
+  padding-top: 128px;
+  background: linear-gradient(180deg, #e7daed, #d8bfe3);
+  border: 1px solid #5c4678;
+  border-top: none;
+  text-align: center;
+`;
 
 const presentation = css`
   font-family: 'Quicksand';
@@ -51,10 +59,14 @@ const button = css`
 `;
 
 const video = css`
-  display: flex;
+  //display: flex;
   margin: auto;
   width: 100%;
-  text-align: center;
+  //text-align: center;
+  animation-name: fader;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  z-index: 20;
 `;
 
 function App() {
@@ -73,21 +85,25 @@ function App() {
         </nav>
       </header>
       <body>
-        <div css={presentation}>
-          <h1 css={presentationH1}>
-            A space odyssey<br></br> awaits you.
-          </h1>
-          <h2 css={presentationH2}>
-            Beautiful space images and information of your current sky map
-            location on every <strong>new tab</strong>.
-          </h2>
-          <button css={button}>Add to chrome - It's Free</button>
-        </div>
+        <section css={top}>
+          <div css={presentation}>
+            <h1 css={presentationH1}>
+              A space odyssey<br></br> awaits you.
+            </h1>
+            <h2 css={presentationH2}>
+              Beautiful space images and information of your current sky map
+              location on every <strong>new tab</strong>.
+            </h2>
+            <button css={button}>Add to chrome - It's Free</button>
+          </div>
 
-        <div css={video}>
-          <SlideShow />
-        </div>
-
+          <div css={video}>
+            <SlideShow />
+            <div>
+              <ChangingImage />
+            </div>
+          </div>
+        </section>
         {/* <div css={features}></div> */}
       </body>
     </div>
