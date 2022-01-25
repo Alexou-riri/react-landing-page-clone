@@ -24,6 +24,8 @@ const navigationStyle = css`
   justify-content: space-between;
   //max-width: 1128px;
   padding-top: 42px;
+  padding-left: 170px;
+  padding-right: 170px;
   //width: 586px;
   background-color: #396ecf40;
 `;
@@ -40,7 +42,7 @@ const menu = css`
 
 //:hover
 const top = css`
-  padding-top: 128px;
+  padding-top: 80px;
   background: linear-gradient(180deg, #396ecf40, #d8bfe3);
   border: 1px solid #5c4678;
   border-top: none;
@@ -50,11 +52,13 @@ const top = css`
 const presentation = css`
   font-family: 'Quicksand';
   text-align: center;
-  margin-top: 50px;
+  margin-top: 40px;
 `;
 
 const presentationH1 = css`
   font-size: 60px;
+  font-family: 'Quicksand';
+  font-weight: 600;
 `;
 
 const presentationH2 = css`
@@ -64,15 +68,26 @@ const presentationH2 = css`
 const button = css`
   margin: 50px 40px;
   height: 60px;
-  width: 300px;
-  border-radius: 20px;
+  width: 350px;
+  border-radius: 40px;
+  background-color: linear-gradient(180deg, #9131c3, #391f5b);
+  color: white;
+  font-family: 'Quicksand';
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 20px;
 `;
 
 const navigateur = css`
   margin: 0px;
 `;
 const features = css`
-  background-color: #d8bfe3;
+  background-color: #391f5b;
+  padding-top: 200px;
+`;
+
+const titel = css`
+  color: white;
 `;
 
 const video = css`
@@ -80,9 +95,6 @@ const video = css`
   margin: auto;
   width: 100%;
   //text-align: center;
-  animation-name: fader;
-  animation-delay: 4s;
-  animation-duration: 1s;
   z-index: 20; */
   /* max-width: 100%;
   margin-bottom: -16%;
@@ -116,7 +128,7 @@ function App() {
               location on every <strong>new tab</strong>.
             </h2>
             <button css={button}>
-              <GoogleLogo /> "Add to chrome - It's Free
+              <GoogleLogo /> ADD TO CHROME - IT'S FREE
             </button>
           </div>
 
