@@ -1,0 +1,27 @@
+.slide-container {
+  /* width: 1150px; */
+  /* height: 350px;
+  width: 100%;
+  margin: auto; */
+}
+.image-container {
+  /* size-adjust: inherit; */
+  /* position: absolute; */
+  /* height: 100%;
+  width: 100%;
+  resize: both; */
+  /*box-sizing: border-box; */
+  /* object-fit: cover; */
+  /* object-fit: contain; */
+  height: 550px;
+}
+
+.image-container img {
+  object-fit: contain;
+  /*position: relative;*/
+  /* max-width: 100%; */
+  max-height: 100%;
+  width: 1028px;
+  border: solid 4px white;
+  border-radius: 20px;
+}
