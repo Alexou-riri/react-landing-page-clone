@@ -1,9 +1,13 @@
 /** @jsxImportSource @emotion/react*/
 import { css } from '@emotion/react';
 import './App.css';
-import { ReactComponent as ChangingImage } from './images/02.60644d3b.jpg';
 import { ReactComponent as LogoIcon } from './images/spatium-white-logo.f2d215ee.svg';
-import { ReactComponent as SlideShow } from './images/browser-mockup.9d688e12.svg';
+import { ReactComponent as GoogleLogo } from './images/chrome-logo.svg';
+import { ReactComponent as Navigateur } from './images/browser-mockup.9d688e12.svg';
+import 'react-slideshow-image/dist/styles.css';
+import React from 'react';
+// import { Fade } from 'react-slideshow-image';
+import Slideshow from './Slideshow';
 
 const navigationStyle = css`
   font-family: 'Quicksand_300Light';
@@ -13,9 +17,10 @@ const navigationStyle = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1128px;
+  //max-width: 1128px;
   padding-top: 42px;
   //width: 586px;
+  background-color: #135de540;
 `;
 
 const menu = css`
@@ -70,6 +75,15 @@ const video = css`
 `;
 
 function App() {
+  // const SlideShow = () => {
+  //   const fadeImages = [
+  //     './images/slide_1.jpg',
+  //     './images/slide_2.jpg',
+  //     './images/slide_3.jpg',
+  //     './images/slide_4.jpg',
+  //   ];
+  // };
+
   return (
     <div className="App">
       <header>
@@ -94,14 +108,37 @@ function App() {
               Beautiful space images and information of your current sky map
               location on every <strong>new tab</strong>.
             </h2>
-            <button css={button}>Add to chrome - It's Free</button>
+            <button css={button}>
+              <GoogleLogo /> "Add to chrome - It's Free
+            </button>
           </div>
 
           <div css={video}>
-            <SlideShow />
-            <div>
-              <ChangingImage />
-            </div>
+            <Navigateur />
+            <Slideshow />
+
+            {/* <div className="slide-container">
+              <Fade>
+                <div className="each-fade">
+                  <div>
+                    <img src={fadeImages[0]} />
+                  </div>
+                </div>
+                <div className="each-fade">
+                  <div>
+                    <img src={fadeImages[1]} />
+                  </div>
+                </div>
+                <div className="each-fade">
+                  <div>
+                    <img src={fadeImages[2]} />
+                  </div>
+                </div>
+                <div className="each-fade">
+                  <img src={fadeImages[3]} />
+                </div>
+              </Fade>
+            </div> */}
           </div>
         </section>
         {/* <div css={features}></div> */}
