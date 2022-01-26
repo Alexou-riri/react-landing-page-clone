@@ -37,6 +37,31 @@
   }
 } */
 
-.feature1 {
+.feature1,
+.feature2,
+.feature3,
+.feature4,
+.feature5 {
   border: none;
+  display: flex;
+  margin-top: 100px;
+}
+
+h1 {
+  color: white;
+  font-family: 'Quicksand';
+  font-weight: 600;
+  text-shadow: rgb(57 31 91 / 60%);
+  font-size: 37px;
+}
+
+p {
+  color: #c088d9;
+  font-family: 'quicksand';
+  font-weight: 600;
+  font-size: 20px;
+}
+
+img {
+  width: 100px;
 }

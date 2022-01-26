@@ -70,20 +70,22 @@ const button = css`
   height: 60px;
   width: 350px;
   border-radius: 40px;
-  background-color: linear-gradient(180deg, #9131c3, #391f5b);
+  background: linear-gradient(180deg, #396ecf40, #d8bfe3);
   color: white;
   font-family: 'Quicksand';
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 22px;
   padding-left: 20px;
+  cursor: pointer;
 `;
 
 const navigateur = css`
   margin: 0px;
 `;
 const features = css`
-  background-color: #391f5b;
+  background: #391f5b;
   padding-top: 200px;
+  //display: flex;
 `;
 
 const titel = css`
@@ -152,9 +154,7 @@ function App() {
             </div>
           </div>
           <div className="feature2">
-            <div>
-              <img src={Feature2} alt="Sun Widget" />
-            </div>
+            <div></div>
             <div>
               <h1>Sun Widget.</h1>
               <p>
@@ -163,6 +163,7 @@ function App() {
                 an easy-to-read display, so you can stay tuned in your favorite
                 sun event - light up your world!.
               </p>
+              <img src={Feature2} alt="Sun Widget" />
             </div>
           </div>
           <div className="feature3">
@@ -206,6 +207,21 @@ function App() {
             </div>
           </div>
         </div>
+        <footer>
+          <div>
+            <LogoIcon />
+            <p>Made of stardust from Brazil and Canada</p>
+          </div>
+          <div>
+            <h2>Be the first to know. No spam.</h2>
+            <p>
+              Join us and share our passion for the universe!. Stay in the loop
+              about new product updates, features and announcements.
+            </p>
+
+            <button>Subscribe</button>
+          </div>
+        </footer>
       </body>
     </div>
   );
