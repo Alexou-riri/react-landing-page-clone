@@ -21,9 +21,9 @@ const navigationStyle = css`
   align-items: center;
   justify-content: space-between;
   padding-top: 35px;
-  padding-left: 400px;
-  padding-right: 400px;
-  background-color: #396ecf40;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background: linear-gradient(180deg, #d8bfe3, #e7daed);
   font-family: 'Quicksand';
   font-weight: 600;
 `;
@@ -37,35 +37,50 @@ const menu = css`
   cursor: pointer;
 `;
 
+const logoIcon = css`
+  cursor: pointer;
+`;
+
 const list = css`
   display: flex;
   align-items: center;
   margin-right: 32px;
+
+  a {
+    color: #76226f;
+    text-decoration: none;
+  }
+
+  :hover {
+    text-decoration: underline;
+  }
 `;
 
-//:hover
 const top = css`
   padding-top: 80px;
-  background: linear-gradient(180deg, #396ecf40, #d8bfe3);
-  //border: 1px solid #5c4678;
-  //border-top: none;
+  background: linear-gradient(180deg, #e7daed, #d8bfe3);
   text-align: center;
+  z-index: 2;
 `;
 
 const presentation = css`
   font-family: 'Quicksand';
   text-align: center;
   margin-top: 40px;
-`;
 
-const presentationH1 = css`
-  font-size: 60px;
-  font-family: 'Quicksand';
-  font-weight: 600;
-`;
+  h1 {
+    font-size: 60px;
+    color: #391f5b;
+  }
 
-const presentationH2 = css`
-  font-size: 23px;
+  h2 {
+    color: #76226f;
+  }
+
+  span {
+    font-weight: 700;
+    text-decoration-style: dotted;
+  }
 `;
 
 const button = css`
@@ -73,38 +88,70 @@ const button = css`
   height: 60px;
   width: 350px;
   border-radius: 40px;
-  background: linear-gradient(180deg, #396ecf40, #d8bfe3);
+  background: linear-gradient(
+    180deg,
+    rgba(179, 132, 201, 0.84),
+    rgba(57, 31, 91, 0.84) 50%
+  );
+  box-shadow: 0 2px 2px rgb(57 31 91 / 24%), 0 8px 12px rgb(179 132 201 / 40%);
+  border: none;
   color: white;
   font-family: 'Quicksand';
-  font-weight: 600;
+  //font-weight: 700;
   font-size: 20px;
   padding-left: 20px;
   cursor: pointer;
+  text-shadow: 0 0 4px hsl(0deg 0% 100% / 40%), 0 0 12px hsl(0deg 0% 100% / 20%),
+    1px 1px 4px rgb(57 31 91 / 60%), 4px 4px 16px rgb(57 31 91 / 32%);
+
+  span {
+    font-weight: 700;
+  }
+
+  :hover {
+    background: linear-gradient(
+      180deg,
+      rgba(179, 132, 201, 0.92),
+      rgba(57, 31, 91, 0.94) 50%
+    );
+  }
 `;
 
 const navigateur = css`
-  //margin: 0px;
+  margin-bottom: -4px;
 `;
 const features = css`
   background: #391f5b;
-  padding-top: 200px;
+  padding-top: 180px;
   //display: flex;
+
+  svg {
+    fill: rgb(57, 31, 91);
+    position: absolute;
+    margin-top: -280px;
+  }
 `;
 
 const titel = css`
   color: white;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 4px hsl(0deg 0% 100% / 30%), 0 0 12px hsl(0deg 0% 100% / 20%),
+    1px 1px 4px rgb(193 28 135 / 60%), 4px 4px 16px rgb(80 77 69 / 32%);
+  font-family: 'Quicksand';
+  font-size: 32px;
+  font-weight: 700;
 `;
 
 const animation = css`
-  /* //display: flex;
-  margin: auto;
-  width: 100%;
-  //text-align: center;
-  z-index: 20; */
-  /* max-width: 100%;
-  margin-bottom: -16%;
-  margin-left: 16px;
-  margin-right: 16px; */
+  margin-bottom: -40px;
+`;
+
+const text = css`
+  margin-right: 60px;
+`;
+
+const righty = css`
+  object-position: right center;
 `;
 
 function App() {
@@ -112,7 +159,7 @@ function App() {
     <div className="App">
       <header>
         <nav css={navigationStyle}>
-          <LogoIcon />
+          <LogoIcon css={logoIcon} />
           {/* faire son curseur pointer  */}
           <ul css={menu}>
             <li css={list}>
@@ -127,15 +174,15 @@ function App() {
       <body>
         <section css={top}>
           <div css={presentation}>
-            <h1 css={presentationH1}>
+            <h1>
               A space odyssey<br></br> awaits you.
             </h1>
-            <h2 css={presentationH2}>
+            <h2>
               Beautiful space images and information of your current sky map
-              location on every <strong>new tab</strong>.
+              location on every <span>new tab</span>.
             </h2>
             <button css={button}>
-              <GoogleLogo /> ADD TO CHROME - IT'S FREE
+              <GoogleLogo /> <span>ADD TO CHROME-</span> IT'S FREE
             </button>
           </div>
 
@@ -143,6 +190,9 @@ function App() {
             <Navigateur css={navigateur} />
             <Slideshow />
           </div>
+        </section>
+
+        <div className="Features" css={features}>
           <svg
             id="clouds"
             xmlns="http://www.w3.org/2000/svg"
@@ -177,34 +227,32 @@ function App() {
      M95 100 Q 100 15 105 100 Z"
             ></path>{' '}
           </svg>
-        </section>
-        <div className="Features" css={features}>
           <div className="feature1">
             <div className="media">
               <img src={Feature1} alt="Space images" />
             </div>
             <div>
-              <h1>Space images.</h1>
-              <p>
+              <h1 css={titel}>Space images.</h1>
+              <p css={text}>
                 Every day get a fascinating image of our universe. Enjoy
                 pictures of stars, planets, moons, galaxies, nebulae, comets and
                 more right on your browser tab.
               </p>
             </div>
           </div>
-          <div className="line"></div>
+          {/* <div className="line"></div> */}
           <div className="feature2">
-            <div>
-              <h1>Sun Widget.</h1>
+            <div className="text">
+              <h1 css={titel}>Sun Widget.</h1>
               <p>
                 Find out when the sunrise, sunset, first and last light times
                 will be precisely at your location. It also shows a countdown in
                 an easy-to-read display, so you can stay tuned in your favorite
                 sun event - light up your world!.
               </p>
-              <div className="media">
-                <img src={Feature2} alt="Sun Widget" />
-              </div>
+            </div>
+            <div className="media">
+              <img src={Feature2} alt="Sun Widget" />
             </div>
           </div>
           <div className="feature3">
@@ -212,7 +260,7 @@ function App() {
               <img src={Feature3} alt="Space images" />
             </div>
             <div>
-              <h1>Moon Widget</h1>
+              <h1 css={titel}>Moon Widget</h1>
               <p>
                 See the current moon phase in real-time, countdowns to moon
                 events (New Moon, First Quarter, Full Moon and Last Quarter),
@@ -222,16 +270,16 @@ function App() {
             </div>
           </div>
           <div className="feature4">
-            <div className="media">
-              <img src={Feature4} alt="Space images" />
-            </div>
             <div>
-              <h1>Inspire Yourself.</h1>
+              <h1 css={titel}>Inspire Yourself.</h1>
               <p>
                 Receive a daily dose of inspiration, insight and positive action
                 with our curated list of quotes from the most intelligent people
                 in history.
               </p>
+            </div>
+            <div className="media">
+              <img src={Feature4} alt="Space images" />
             </div>
           </div>
           <div className="feature5">
@@ -239,7 +287,7 @@ function App() {
               <img src={Feature5} alt="Space images" />
             </div>
             <div>
-              <h1>Customizable INterface.</h1>
+              <h1 css={titel}>Customizable INterface.</h1>
               <p>
                 You can customize your experience with Spatium by showing and
                 hiding widgets as per your needs. You decide what's on your New
