@@ -13,21 +13,19 @@ import Feature2 from './images/sun-widget.png';
 import Feature3 from './images/moon-widget.png';
 import Feature4 from './images/inspire.png';
 import Feature5 from './images/customizable.png';
+import { ReactComponent as Hunt } from './images/featured.svg';
 
 const navigationStyle = css`
-  font-family: 'Quicksand_300Light';
-  font-size: 16px;
-  font-stretch: 100%;
   color: rgb(85, 26, 139);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  //max-width: 1128px;
-  padding-top: 42px;
-  padding-left: 170px;
-  padding-right: 170px;
-  //width: 586px;
+  padding-top: 35px;
+  padding-left: 400px;
+  padding-right: 400px;
   background-color: #396ecf40;
+  font-family: 'Quicksand';
+  font-weight: 600;
 `;
 
 const menu = css`
@@ -35,17 +33,22 @@ const menu = css`
   font-family: 'Quicksand';
   display: flex;
   text-align: center;
-  margin-right: 32px;
   gap: 20px;
   cursor: pointer;
+`;
+
+const list = css`
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
 `;
 
 //:hover
 const top = css`
   padding-top: 80px;
   background: linear-gradient(180deg, #396ecf40, #d8bfe3);
-  border: 1px solid #5c4678;
-  border-top: none;
+  //border: 1px solid #5c4678;
+  //border-top: none;
   text-align: center;
 `;
 
@@ -74,13 +77,13 @@ const button = css`
   color: white;
   font-family: 'Quicksand';
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   padding-left: 20px;
   cursor: pointer;
 `;
 
 const navigateur = css`
-  margin: 0px;
+  //margin: 0px;
 `;
 const features = css`
   background: #391f5b;
@@ -92,7 +95,7 @@ const titel = css`
   color: white;
 `;
 
-const video = css`
+const animation = css`
   /* //display: flex;
   margin: auto;
   width: 100%;
@@ -112,10 +115,12 @@ function App() {
           <LogoIcon />
           {/* faire son curseur pointer  */}
           <ul css={menu}>
-            <li>
+            <li css={list}>
               <a href="#Features">Features</a>
             </li>
-            <li>Add to Chrome</li>
+            <li css={list}>
+              <Hunt />
+            </li>
           </ul>
         </nav>
       </header>
@@ -134,14 +139,48 @@ function App() {
             </button>
           </div>
 
-          <div css={video}>
+          <div css={animation}>
             <Navigateur css={navigateur} />
             <Slideshow />
           </div>
+          <svg
+            id="clouds"
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="100%"
+            height="100"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            {' '}
+            <path
+              d="M-5 100 Q 0 20 5 100 Z
+     M0 100 Q 5 0 10 100
+     M5 100 Q 10 30 15 100
+     M10 100 Q 15 10 20 100
+     M15 100 Q 20 30 25 100
+     M20 100 Q 25 -10 30 100
+     M25 100 Q 30 10 35 100
+     M30 100 Q 35 30 40 100
+     M35 100 Q 40 10 45 100
+     M40 100 Q 45 50 50 100
+     M45 100 Q 50 20 55 100
+     M50 100 Q 55 40 60 100
+     M55 100 Q 60 60 65 100
+     M60 100 Q 65 50 70 100
+     M65 100 Q 70 20 75 100
+     M70 100 Q 75 45 80 100
+     M75 100 Q 80 30 85 100
+     M80 100 Q 85 20 90 100
+     M85 100 Q 90 50 95 100
+     M90 100 Q 95 25 100 100
+     M95 100 Q 100 15 105 100 Z"
+            ></path>{' '}
+          </svg>
         </section>
         <div className="Features" css={features}>
           <div className="feature1">
-            <div>
+            <div className="media">
               <img src={Feature1} alt="Space images" />
             </div>
             <div>
@@ -153,8 +192,8 @@ function App() {
               </p>
             </div>
           </div>
+          <div className="line"></div>
           <div className="feature2">
-            <div></div>
             <div>
               <h1>Sun Widget.</h1>
               <p>
@@ -163,11 +202,13 @@ function App() {
                 an easy-to-read display, so you can stay tuned in your favorite
                 sun event - light up your world!.
               </p>
-              <img src={Feature2} alt="Sun Widget" />
+              <div className="media">
+                <img src={Feature2} alt="Sun Widget" />
+              </div>
             </div>
           </div>
           <div className="feature3">
-            <div>
+            <div className="media">
               <img src={Feature3} alt="Space images" />
             </div>
             <div>
@@ -181,7 +222,7 @@ function App() {
             </div>
           </div>
           <div className="feature4">
-            <div>
+            <div className="media">
               <img src={Feature4} alt="Space images" />
             </div>
             <div>
@@ -194,7 +235,7 @@ function App() {
             </div>
           </div>
           <div className="feature5">
-            <div>
+            <div className="media">
               <img src={Feature5} alt="Space images" />
             </div>
             <div>
@@ -218,8 +259,14 @@ function App() {
               Join us and share our passion for the universe!. Stay in the loop
               about new product updates, features and announcements.
             </p>
-
-            <button>Subscribe</button>
+            <form>
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your email address"
+              />
+              <button>Subscribe</button>
+            </form>
           </div>
         </footer>
       </body>
