@@ -1,5 +1,5 @@
 .media {
-  margin: 0 90px 20px 80px;
+  /* margin: 0 90px 20px 80px; */
 }
 
 .feature1,
@@ -9,9 +9,15 @@
 .feature5 {
   border: none;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-left: 50px;
-  margin-bottom: 120px;
+  margin-bottom: 66px;
+  margin-top: 46px;
   gap: 50px;
+}
+.feature5 {
+  padding-bottom: 70px;
 }
 
 p {
@@ -21,6 +27,17 @@ p {
   font-size: 20px;
   letter-spacing: 0.04em;
 }
+.feature1 a,
+.feature2 a,
+.feature3 a,
+.feature4 a,
+.feature5 a {
+  color: white;
+  text-decoration: none;
+}
+/* :hover a {
+  text-decoration: underline;
+} */
 
 img {
   width: 400px;
@@ -42,5 +59,9 @@ img {
 footer {
   display: flex;
   gap: 40%;
-  margin: 30px 0 30px 30px;
+  /* margin: 30px 0 30px 30px; */
+  padding: 64px 32px;
+  margin-top: -66px;
+  background: #391f5b;
+  border: 2px solid #5c4678;
 }

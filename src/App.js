@@ -150,9 +150,44 @@ const text = css`
   margin-right: 60px;
 `;
 
-const righty = css`
-  object-position: right center;
+const line1 = css`
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(179, 132, 201, 0.4),
+    rgba(179, 132, 201, 0)
+  );
 `;
+
+const line2 = css`
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(179, 132, 201, 0),
+    rgba(179, 132, 201, 0.4)
+  ); ;
+`;
+
+const emailButton = css`
+  border: 1px solid #b384c9;
+  border-radius: 40px;
+  width: 200px;
+  height: 38px;
+  padding-right: 20px;
+  font-family: 'quicksand';
+`;
+
+// const googleLink = css`
+//   color: white;
+//   font-size: 40px;
+//   text-decoration: none;
+// `;
+
+// const righty = css`
+//   object-position: right center;
+// `;
 
 function App() {
   return (
@@ -238,9 +273,17 @@ function App() {
                 pictures of stars, planets, moons, galaxies, nebulae, comets and
                 more right on your browser tab.
               </p>
+              <p>
+                <a
+                  href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&utm_medium=space-images"
+                  alt="link google"
+                >
+                  + Add to Chrome
+                </a>
+              </p>
             </div>
           </div>
-          {/* <div className="line"></div> */}
+          <div css={line1}></div>
           <div className="feature2">
             <div className="text">
               <h1 css={titel}>Sun Widget.</h1>
@@ -250,11 +293,20 @@ function App() {
                 an easy-to-read display, so you can stay tuned in your favorite
                 sun event - light up your world!.
               </p>
+              <p>
+                <a
+                  href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&utm_medium=space-images"
+                  alt="link google"
+                >
+                  + Add to Chrome
+                </a>
+              </p>
             </div>
             <div className="media">
               <img src={Feature2} alt="Sun Widget" />
             </div>
           </div>
+          <div css={line2}></div>
           <div className="feature3">
             <div className="media">
               <img src={Feature3} alt="Space images" />
@@ -267,8 +319,17 @@ function App() {
                 along with exact illumination percentages. Never miss an
                 opportunity for moon gazing anymore.
               </p>
+              <p>
+                <a
+                  href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&utm_medium=space-images"
+                  alt="link google"
+                >
+                  + Add to Chrome
+                </a>
+              </p>
             </div>
           </div>
+          <div css={line1}></div>
           <div className="feature4">
             <div>
               <h1 css={titel}>Inspire Yourself.</h1>
@@ -277,11 +338,21 @@ function App() {
                 with our curated list of quotes from the most intelligent people
                 in history.
               </p>
+              <p>
+                <a
+                  href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&utm_medium=space-images"
+                  alt="link google"
+                >
+                  + Add to Chrome
+                </a>
+              </p>
             </div>
+
             <div className="media">
               <img src={Feature4} alt="Space images" />
             </div>
           </div>
+          <div css={line2}></div>
           <div className="feature5">
             <div className="media">
               <img src={Feature5} alt="Space images" />
@@ -292,6 +363,14 @@ function App() {
                 You can customize your experience with Spatium by showing and
                 hiding widgets as per your needs. You decide what's on your New
                 Tab page - it's up to you!.
+              </p>
+              <p>
+                <a
+                  href="https://chrome.google.com/webstore/detail/spatium/agdllobgfmpgjedfombjgkkceedjobjb?utm_source=spatium&utm_medium=space-images"
+                  alt="link google"
+                >
+                  + Add to Chrome
+                </a>
               </p>
             </div>
           </div>
@@ -309,6 +388,7 @@ function App() {
             </p>
             <form>
               <input
+                css={emailButton}
                 type="email"
                 name="Email"
                 placeholder="Your email address"
