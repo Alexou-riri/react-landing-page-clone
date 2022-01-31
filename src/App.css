@@ -65,3 +65,7 @@ footer {
   background: #391f5b;
   border: 2px solid #5c4678;
 }
+
+form {
+  gap: 20%;
+}

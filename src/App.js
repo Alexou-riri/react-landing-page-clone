@@ -179,6 +179,33 @@ const emailButton = css`
   font-family: 'quicksand';
 `;
 
+const subscribe = css`
+  border: 1px solid #b384c9;
+  border-radius: 40px;
+  width: 120px;
+  height: 38px;
+  padding-right: 20px;
+  font-family: 'quicksand';
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.84) -38.04%,
+    rgba(231, 218, 237, 0.84) 31.7%,
+    rgba(231, 218, 237, 0.84) 51.83%,
+    rgba(216, 191, 227, 0.84)
+  );
+  margin-left: 30px;
+`;
+
+const footerText = css`
+  font-size: 15px;
+`;
+
+const footerTitle = css`
+  font-family: 'Quicksand';
+  font-weight: 700;
+  font-size: 25px;
+  color: white;
+`;
+
 // const googleLink = css`
 //   color: white;
 //   font-size: 40px;
@@ -381,8 +408,8 @@ function App() {
             <p>Made of stardust from Brazil and Canada</p>
           </div>
           <div>
-            <h2>Be the first to know. No spam.</h2>
-            <p>
+            <h2 css={footerTitle}>Be the first to know. No spam.</h2>
+            <p css={footerText}>
               Join us and share our passion for the universe!. Stay in the loop
               about new product updates, features and announcements.
             </p>
@@ -393,7 +420,7 @@ function App() {
                 name="Email"
                 placeholder="Your email address"
               />
-              <button>Subscribe</button>
+              <button css={subscribe}>Subscribe</button>
             </form>
           </div>
         </footer>
