@@ -1,7 +1,3 @@
-.media {
-  /* margin: 0 90px 20px 80px; */
-}
-
 .feature1,
 .feature2,
 .feature3,
@@ -15,6 +11,8 @@
   margin-bottom: 66px;
   margin-top: 46px;
   gap: 50px;
+  padding-right: 150px;
+  padding-left: 150px;
 }
 .feature5 {
   padding-bottom: 70px;
@@ -35,32 +33,16 @@ p {
   color: white;
   text-decoration: none;
 }
-/* :hover a {
-  text-decoration: underline;
-} */
 
 img {
   width: 400px;
 }
 
-/* .feature2 { */
-/* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'text media';
-  display: inline-flex; */
-
-/* .line {
-  width: 100%;
-  height: 4px;
-  background: black;
-  margin: 30px 0 30px 100px;
-} */
-
 footer {
   display: flex;
   gap: 40%;
   /* margin: 30px 0 30px 30px; */
-  padding: 64px 32px;
+  padding: 64px 150px;
   margin-top: -66px;
   background: #391f5b;
   border: 2px solid #5c4678;

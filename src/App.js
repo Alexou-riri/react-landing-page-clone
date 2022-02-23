@@ -196,13 +196,13 @@ const subscribe = css`
 `;
 
 const footerText = css`
-  font-size: 15px;
+  font-size: 20px;
 `;
 
 const footerTitle = css`
   font-family: 'Quicksand';
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   color: white;
 `;
 
