@@ -193,6 +193,7 @@ const subscribe = css`
     rgba(216, 191, 227, 0.84)
   );
   margin-left: 30px;
+  cursor: pointer;
 `;
 
 const footerText = css`
