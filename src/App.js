@@ -217,7 +217,7 @@ const footerTitle = css`
 //   object-position: right center;
 // `;
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header>
@@ -429,5 +429,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
