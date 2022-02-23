@@ -238,7 +238,8 @@ export default function App() {
         <section css={top}>
           <div css={presentation}>
             <h1>
-              A space odyssey<br></br> awaits you.
+              A space odyssey
+              <br /> awaits you.
             </h1>
             <h2>
               Beautiful space images and information of your current sky map
@@ -288,7 +289,7 @@ export default function App() {
      M85 100 Q 90 50 95 100
      M90 100 Q 95 25 100 100
      M95 100 Q 100 15 105 100 Z"
-            ></path>{' '}
+            />{' '}
           </svg>
           <div className="feature1">
             <div className="media">
@@ -311,7 +312,7 @@ export default function App() {
               </p>
             </div>
           </div>
-          <div css={line1}></div>
+          <div css={line1} />
           <div className="feature2">
             <div className="text">
               <h1 css={titel}>Sun Widget.</h1>
@@ -334,7 +335,7 @@ export default function App() {
               <img src={Feature2} alt="Sun Widget" />
             </div>
           </div>
-          <div css={line2}></div>
+          <div css={line2} />
           <div className="feature3">
             <div className="media">
               <img src={Feature3} alt="Space images" />
@@ -357,7 +358,7 @@ export default function App() {
               </p>
             </div>
           </div>
-          <div css={line1}></div>
+          <div css={line1} />
           <div className="feature4">
             <div>
               <h1 css={titel}>Inspire Yourself.</h1>
@@ -380,7 +381,7 @@ export default function App() {
               <img src={Feature4} alt="Space images" />
             </div>
           </div>
-          <div css={line2}></div>
+          <div css={line2} />
           <div className="feature5">
             <div className="media">
               <img src={Feature5} alt="Space images" />
